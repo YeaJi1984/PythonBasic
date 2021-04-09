@@ -1,0 +1,10 @@
+def changeNum(n): #함수선언
+    if n%100 ==1:# 100으로 나눈 나머지가 1이면
+        return str(n)+"st" #문자열로 바꾸어 st 붙임
+    elif n%100 ==2:#나머지가 2면
+        return str(n)+"nd"#문자열로 바꾸어 nd 붙임
+    elif n%100 ==3:#3이면
+        return str(n) +"rd" #문자열로 바꾸어 rd붙임
+    else: #그 이외는
+        return str(n)+"th" #문자열로 바꾸어 th 붙임
+changeNum(int(input())) #출력
