@@ -1,0 +1,29 @@
+
+
+def SSort(arr):
+    for i in range(len(arr)):
+        indexMin = i #제일 앞이 제일 작을 것이라고 가정
+        for j in range(i+1, len(arr)): #맨앞에 두개 비교
+            if arr[j] <arr[indexMin]:
+                indexMin = j
+        arr[i], arr[indexMin] = arr[indexMin], arr[i]
+    return arr
+
+
+
+array=[12,13,11,14,10]
+print(SSort(array))
+
+
+
+
+
+array =[12,13,11,14,10]
+
+for i in range(len(array)):
+    w = array[i]
+    indexMin = array.index(min(array[i:]))#맨앞에서 부터 끝까지 중에 제일 작은것의 인덱스
+    array[i] = array[indexMin]
+    array[indexMin] = w
+    
+    print(array)
